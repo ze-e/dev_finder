@@ -1,0 +1,117 @@
+@mixin flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+@mixin flex-mobile-column {
+  @include media-sm() {
+    flex-direction: column;
+  }
+}
+
+@mixin flex-mobile-column-centered {
+  @include media-sm() {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@mixin centered-absolute {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin h1 {
+  font-family: var(--h1-font);
+  font-weight: var(--h1-weight);
+  font-size: var(--h1-size);
+  line-height: var(--h1-lh);
+  color: var(--text-color);
+}
+
+@mixin h2 {
+  font-family: var(--h2-font);
+  font-weight: var(--h2-weight);
+  font-size: var(--h2-size);
+  line-height: var(--h2-lh);
+  color: var(--text-color);
+
+  @include media-mobile {
+    font-size: var(--h3-size);
+    line-height: var(--h3-size);
+  }
+
+    @include media-mobile-sm {
+    font-size: var(--h4-size);
+  }
+}
+
+@mixin h3 {
+  font-family: var(--h3-font);
+  font-weight: var(--h3-weight);
+  font-size: var(--h3-size);
+  line-height: var(--h3-lh);
+  color: var(--theme-1);
+}
+
+@mixin h4 {
+  font-family: var(--h4-font);
+  font-weight: var(--h4-weight);
+  font-size: var(--h4-size);
+  line-height: var(--h4-lh);
+  color: var(--text-color);
+}
+
+@mixin body {
+  font-family: var(--body-font);
+  font-weight: var(--body-weight);
+  font-size: var(--body-size);
+  line-height: var(--body-lh);
+  color: var(--text-color);
+}
+
+/* media queries */
+@mixin media-desktop {
+  @media only screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin media-desktop-sm {
+  @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin media-tablet-sm {
+  @media only screen and (min-width: 425px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media only screen and (min-width: 375px) and (max-width: 424px) {
+    @content;
+  }
+}
+
+@mixin media-mobile-sm {
+  @media only screen and (max-width: 374px) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @media only screen and (max-width: 600px) {
+    @content;
+  }
+}

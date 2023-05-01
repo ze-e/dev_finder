@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex: 1 1 50%;
+  margin-bottom: 10px;
+  max-width: 50%;
+}
+
+.icon {
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.text {
+  margin: 0 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}

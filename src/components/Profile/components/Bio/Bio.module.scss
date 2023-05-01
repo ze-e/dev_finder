@@ -1,0 +1,26 @@
+@use 'src/styles/mixins.scss';
+@import 'src/styles/_globals.scss';
+
+.container {
+  @include mixins.flex-mobile-column-centered;
+  display: flex;
+  justify-content: space-between;
+  flex: 2;
+}
+
+.subtitle {
+  font-weight: normal;
+  margin: 20px 0;
+  margin-top: 8px;
+}
+
+.description {
+  margin-top: 24px;
+}
+
+.date {
+  @include mixins.body;
+  @include mixins.media-sm {
+    margin-top: 10px;
+  }
+}
